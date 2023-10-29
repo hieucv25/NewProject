@@ -23,4 +23,19 @@ public class ServiceChuVuImpl implements ServiceChucVu {
     public ChucVu findById(UUID id) {
         return cvrp.getOne(id);
     }
+
+    @Override
+    public void save(ChucVu cv) {
+        cvrp.saveAndFlush(cv);
+    }
+
+    @Override
+    public void delete(UUID id) {
+        cvrp.deleteById(id);
+    }
+
+    @Override
+    public void update(ChucVu cv) {
+        cvrp.save(cv);
+    }
 }

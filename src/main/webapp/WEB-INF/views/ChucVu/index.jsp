@@ -10,11 +10,12 @@
     </div>
 
 </form>
-<form method="POST" class="col-md-10" action="">
+<form method="POST" class="col-md-10" action="/chuc-vu/save">
     <div class="row" style="display: flex; justify-content: center; align-items: center;">
         <div class="col-md-6">
             <label>Mã</label>
             <input type="text" class="form-control" placeholder="Mã" name="ma" value="${cv.ma}" >
+            <label style="padding-top: 5px;color: red; font-weight: bold;">${message}</label>
         </div>
         <div class="col-md-6">
             <label>Tên Chức Vụ</label>
@@ -44,8 +45,8 @@
             <td>${cv.ma}</td>
             <td>${cv.ten}</td>
             <td>
-                <a class="btn btn-danger" href="">Delete</a>
-                <a class="btn btn-success" href="">Detail</a>
+                <a class="btn btn-danger" href="/chuc-vu/delete/${cv.id}">Delete</a>
+                <a class="btn btn-success" href="/chuc-vu/detail/${cv.id}">Detail</a>
             </td>
         </tr>
     </c:forEach>

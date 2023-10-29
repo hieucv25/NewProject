@@ -27,4 +27,14 @@ public class ServiceSPCTImpl implements ServiceSPCT {
     public SanPhamChiTiet getOne(UUID id) {
         return spctrp.getOne(id);
     }
+
+    @Override
+    public void save(SanPhamChiTiet cpct) {
+        spctrp.saveAndFlush(cpct);
+    }
+
+    @Override
+    public void update(SanPhamChiTiet scpt) {
+        spctrp.save(scpt);
+    }
 }

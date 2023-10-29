@@ -10,4 +10,16 @@ import java.util.UUID;
 public interface DongSPRepository extends JpaRepository<DongSP, UUID> {
     @Override
     List<DongSP> findAll();
+
+    @Override
+    <S extends DongSP> S saveAndFlush(S entity);
+
+    @Override
+    DongSP getOne(UUID uuid);
+
+    @Override
+    <S extends DongSP> S save(S entity);
+
+    @Override
+    void deleteById(UUID uuid);
 }

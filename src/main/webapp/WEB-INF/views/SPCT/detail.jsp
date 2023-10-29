@@ -5,29 +5,20 @@
 <a href="/spct/index" style="padding-left: 20px; color: green; font-size: 35px;"><i class="fa-solid fa-backward"></i></a>
 <br>
 <br>
-<form class="d-flex" role="search" method="POST" action="/nhan-vien/search" style="padding-top: 20px">
-    <div class="col-md-2"></div>
-    <div class="col-md-6">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
-    </div>
-    <div class="col-md-4" style="padding-left: 10px;padding-top: 10px;">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-    </div>
-</form>
-<form method="POST" class="col-md-10" action="/spct/update">
+<form method="POST" class="col-md-10" action="/spct/update/${spct.id}">
     <div class="row" style="display: flex; justify-content: center; align-items: center;">
         <div class="col-md-6">
             <label>Sản Phẩm</label>
-            <select class="form-select" aria-label="Default select example" name="cv">
+            <select class="form-select" aria-label="Default select example" name="sp">
                 <option selected>Open this select menu</option>
                 <c:forEach items="${listSP}" var="sp">
-                    <option value="${sp.id}" ${spct.sp.id==sp.id ? "selected":""}>${sp.ten}</option>
+                    <option value="${sp.id}" ${spct.sp.id==sp.id ? "selected":""} disabled>${sp.ten}</option>
                 </c:forEach>
             </select>
         </div>
         <div class="col-md-6">
             <label>Nhà Sản Xuất</label>
-            <select class="form-select" aria-label="Default select example" name="cv">
+            <select class="form-select" aria-label="Default select example" name="nsx">
                 <option selected>Open this select menu</option>
                 <c:forEach items="${listNSX}" var="nsx">
                     <option value="${nsx.id}" ${spct.nsx.id == nsx.id ? "selected":""}>${nsx.ten}</option>
@@ -38,7 +29,7 @@
     <div class="row" style="display: flex; justify-content: center; align-items: center;">
         <div class="col-md-6">
             <label>Màu Sắc</label>
-            <select class="form-select" aria-label="Default select example" name="cv">
+            <select class="form-select" aria-label="Default select example" name="ms">
                 <option selected>Open this select menu</option>
                 <c:forEach items="${listMS}" var="ms">
                     <option value="${ms.id}" ${spct.ms.id == ms.id ? "selected":""}>${ms.ten}</option>
@@ -47,7 +38,7 @@
         </div>
         <div class="col-md-6">
             <label>Dòng Sản Phẩm</label>
-            <select class="form-select" aria-label="Default select example" name="cv">
+            <select class="form-select" aria-label="Default select example" name="dsp">
                 <option selected>Open this select menu</option>
                 <c:forEach items="${listDSP}" var="dsp">
                     <option value="${dsp.id}" ${spct.dsp.id == dsp.id ? "selected":""}>${dsp.ten}</option>

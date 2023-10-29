@@ -14,7 +14,7 @@ import java.util.UUID;
 public class ChucVu {
     @Id
     @Column(name="id",unique = true,nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     @Column(name="ma",unique = true)
     private String ma;

@@ -16,20 +16,24 @@
         <div class="col-md-6">
             <label>Mã</label>
             <input type="text" class="form-control" placeholder="Mã" name="ma" value="${nv.ma}">
+            <label style="padding-top: 2px;font-weight: bold;color: red;">${validateMa}</label>
         </div>
         <div class="col-md-6">
             <label>Tên</label>
             <input type="text" class="form-control" placeholder="Tên" name="ten" value="${nv.ten}">
+            <label style="padding-top: 2px;font-weight: bold;color: red;">${validateTen}</label>
         </div>
     </div>
     <div class="row" style="display: flex; justify-content: center; align-items: center;">
         <div class="col-md-6">
             <label>Tên Đệm</label>
             <input type="text" class="form-control" placeholder="Tên Đệm" name="tenDem" value="${nv.tenDem}">
+            <label style="padding-top: 2px;font-weight: bold;color: red;">${validateTenDem}</label>
         </div>
         <div class="col-md-6">
             <label>Họ</label>
             <input type="text" class="form-control" placeholder="Họ" name="ho" value="${nv.ho}">
+            <label style="padding-top: 2px;font-weight: bold;color: red;">${validateHo}</label>
         </div>
     </div>
     <div class="row" style="display: flex; justify-content: center; align-items: center;">
@@ -51,16 +55,19 @@
         <div class="col-md-6">
             <label>Địa Chỉ</label>
             <input class="form-control" rows="4" name="diaChi" value="${nv.diaChi}">
+            <label style="padding-top: 2px;font-weight: bold;color: red;">${validateDiaChi}</label>
         </div>
     </div>
     <div class="row" style="display: flex; justify-content: center; align-items: center;">
         <div class="col-md-6">
             <label>Ngày Sinh</label>
             <input type="date" class="form-control" placeholder="Ngày Sinh" name="ngaySinh" value="${nv.ngaySinh}">
+            <label style="padding-top: 2px;font-weight: bold;color: red;">${validateNgaySinh}</label>
         </div>
         <div class="col-md-6">
             <label>Số Điện Thoại</label>
             <input type="text" class="form-control" placeholder="Số Điện Thoại" name="sdt" value="${nv.sdt}">
+            <label style="padding-top: 2px;font-weight: bold;color: red;">${validateSDT}</label>
         </div>
     </div>
     <div class="row" style="display: flex; justify-content: center; align-items: center;">
@@ -71,22 +78,24 @@
         <div class="col-md-6">
             <label>Trạng Thái</label>
             <select class="form-select" aria-label="Default select example" name="trangThai">
-                <option selected>Open this select menu</option>
-                <option value="0">Đi Làm</option>
-                <option value="1">Nghỉ Phép</option>
-                <option value="2">Nghỉ Việc</option>
+                <option selected value="null">Open this select menu</option>
+                <option value="0" ${nv.trangThai == 0 ? "selected":""}>Đi Làm</option>
+                <option value="1" ${nv.trangThai == 1 ? "selected":""}>Nghỉ Phép</option>
+                <option value="2" ${nv.trangThai == 2 ? "selected":""}>Nghỉ Việc</option>
             </select>
+            <label style="padding-top: 2px;font-weight: bold;color: red;">${validateTT}</label>
         </div>
     </div>
     <div class="row" style="display: flex; justify-content: center; align-items: center;">
         <div class="col-md-6">
             <label>Chức Vụ</label>
             <select class="form-select" aria-label="Default select example" name="cv">
-                <option selected>Open this select menu</option>
+                <option selected value="null">Open this select menu</option>
                 <c:forEach items="${cv}" var="cv">
                     <option value="${cv.id}">${cv.ten}</option>
                 </c:forEach>
             </select>
+            <label style="padding-top: 2px;font-weight: bold;color: red;">${validateCV}</label>
         </div>
         <div class="col-md-6" style="margin-top: 20px">
             <button type="submit" class="btn btn-success">Thêm</button>

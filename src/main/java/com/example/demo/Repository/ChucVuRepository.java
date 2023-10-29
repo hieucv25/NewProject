@@ -17,4 +17,15 @@ public interface ChucVuRepository extends JpaRepository<ChucVu, UUID> {
 
     @Override
     ChucVu getOne(UUID uuid);
+
+    @Override
+    <S extends ChucVu> S saveAndFlush(S entity);
+
+    @Override
+    void deleteById(UUID uuid);
+
+    @Override
+    <S extends ChucVu> S save(S entity);
+
+
 }

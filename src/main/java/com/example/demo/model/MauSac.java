@@ -16,7 +16,7 @@ import java.util.UUID;
 public class MauSac {
     @Id
     @Column(name="id",nullable = false,unique = true)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @Column(name="ma",unique = true)

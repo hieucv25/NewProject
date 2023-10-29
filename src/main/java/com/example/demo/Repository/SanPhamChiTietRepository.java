@@ -16,4 +16,10 @@ public interface SanPhamChiTietRepository extends JpaRepository<SanPhamChiTiet, 
 
     @Override
     SanPhamChiTiet getOne(UUID uuid);
+
+    @Override
+    <S extends SanPhamChiTiet> S saveAndFlush(S entity);
+
+    @Override
+    <S extends SanPhamChiTiet> S save(S entity);
 }

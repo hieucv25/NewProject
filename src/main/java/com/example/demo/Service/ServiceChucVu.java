@@ -9,4 +9,7 @@ import java.util.UUID;
 public interface ServiceChucVu {
     ArrayList<ChucVu> getAll();
     ChucVu findById(UUID id);
+    void save(ChucVu cv);
+    void delete(UUID id);
+    void update(ChucVu cv);
 }

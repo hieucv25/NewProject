@@ -11,4 +11,8 @@ public interface ServiceSPCT {
     void deleteById(UUID id);
 
     SanPhamChiTiet getOne(UUID id);
+
+    void save(SanPhamChiTiet cpct);
+
+    void update(SanPhamChiTiet scpt);
 }

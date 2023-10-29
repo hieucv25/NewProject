@@ -143,7 +143,7 @@
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Home</a>
+        <a class="navbar-brand" href="/home/index">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -175,12 +175,16 @@
             <span class="right_icon"></span>
             <div class="items">
                 <a href="/nhan-vien/index" style="--i:1;"><span></span>Nhân Viên</a>
-                <a href="" style="--i:2;"><span></span>Sản Phẩm</a>
-                <a href="/nsx/index" style="--i:3;"><span></span>NSX</a>
-                <a href="" style="--i:4;"><span></span>Dòng SP</a>
-                <a href="" style="--i:5;"><span></span>Màu Sắc</a>
+                <a href="/san-pham/index" style="--i:2;"><span></span>Sản Phẩm</a>
+                <a href="/nha-san-xuat/index" style="--i:3;"><span></span>NSX</a>
+                <a href="/dong-sp/index" style="--i:4;"><span></span>Dòng SP</a>
+                <a href="/mau-sac/index" style="--i:5;"><span></span>Màu Sắc</a>
                 <a href="/chuc-vu/index" style="--i:5;"><span></span>Chức Vụ</a>
                 <a href="/spct/index" style="--i:2;"><span></span>Chi Tiết Sản Phẩm</a>
+                <a href="/khach-hang/index" style="--i:2;"><span></span>Khách Hàng</a>
+                <a href="/cua-hang/index" style="--i:2;"><span></span>Cửa Hàng</a>
+                <a href="/hoa-don/index" style="--i:2;"><span></span>Hoá Đơn</a>
+                <a href="/hdct/index" style="--i:2;"><span></span>Hoá Đơn Chi Tiết</a>
             </div>
         </div>
     </div>
@@ -194,6 +198,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
     const dropdown = document.querySelector('.dropdown');
 

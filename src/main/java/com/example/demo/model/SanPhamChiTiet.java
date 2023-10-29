@@ -2,10 +2,12 @@ package com.example.demo.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
+@Transactional
 @Entity
 @Table(name="chi_tiet_sp")
 @AllArgsConstructor
@@ -16,7 +18,7 @@ import java.util.UUID;
 public class SanPhamChiTiet {
     @Id
     @Column(name="id",nullable = false,unique = true)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @Column(name="nam_bh")

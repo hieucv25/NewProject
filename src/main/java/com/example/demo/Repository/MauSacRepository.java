@@ -10,4 +10,16 @@ import java.util.UUID;
 public interface MauSacRepository extends JpaRepository<MauSac, UUID> {
     @Override
     List<MauSac> findAll();
+
+    @Override
+    <S extends MauSac> S saveAndFlush(S entity);
+
+    @Override
+    MauSac getOne(UUID uuid);
+
+    @Override
+    <S extends MauSac> S save(S entity);
+
+    @Override
+    void deleteById(UUID uuid);
 }

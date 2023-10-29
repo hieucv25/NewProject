@@ -17,7 +17,7 @@ import java.util.UUID;
 public class NhanVien {
     @Id
     @Column(name="id",unique = true,nullable = false)
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @Column(name="ma",unique = true,length = 20)
@@ -53,4 +53,7 @@ public class NhanVien {
     @ManyToOne
     @JoinColumn(name="id_cv",nullable = false)
     private ChucVu cv;
+    @OneToOne
+    @JoinColumn(name="id_ch")
+    private CuaHang ch;
 }

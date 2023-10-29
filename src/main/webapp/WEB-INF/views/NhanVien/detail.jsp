@@ -65,7 +65,6 @@
         <div class="col-md-6">
             <label>Trạng Thái</label>
             <select class="form-select" aria-label="Default select example" name="trangThai">
-                <option selected>Open this select menu</option>
                 <option value="0" ${nv.trangThai == 0 ? "selected":""}>Đi Làm</option>
                 <option value="1" ${nv.trangThai == 1 ? "selected":""}>Nghỉ Phép</option>
                 <option value="2" ${nv.trangThai == 2 ? "selected":""}>Nghỉ Việc</option>
@@ -76,7 +75,6 @@
         <div class="col-md-6">
             <label>Chức Vụ</label>
             <select class="form-select" aria-label="Default select example" name="cv">
-                <option selected>Open this select menu</option>
                 <c:forEach items="${cv}" var="cv">
                     <option value="${cv.id}" ${nv.cv.id == cv.id ? "selected":""}>${cv.ten}</option>
                 </c:forEach>

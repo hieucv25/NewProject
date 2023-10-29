@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 @Service
 public class ServiceDongSPImpl implements ServiceDongSP {
@@ -15,5 +16,25 @@ public class ServiceDongSPImpl implements ServiceDongSP {
     @Override
     public ArrayList<DongSP> getAll() {
         return (ArrayList<DongSP>) drp.findAll();
+    }
+
+    @Override
+    public void save(DongSP dsp) {
+        drp.saveAndFlush(dsp);
+    }
+
+    @Override
+    public void update(DongSP dsp) {
+        drp.save(dsp);
+    }
+
+    @Override
+    public void delete(UUID id) {
+        drp.deleteById(id);
+    }
+
+    @Override
+    public DongSP getById(UUID id) {
+        return drp.getOne(id);
     }
 }

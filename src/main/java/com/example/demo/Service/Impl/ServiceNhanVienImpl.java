@@ -8,6 +8,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -38,5 +39,10 @@ public class ServiceNhanVienImpl implements ServiceNhanVien {
     @Override
     public void save(NhanVien nv) {
         nvrp.saveAndFlush(nv);
+    }
+
+    @Override
+    public List<NhanVien> search(String keyword) {
+        return nvrp.search(keyword);
     }
 }

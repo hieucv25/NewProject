@@ -10,4 +10,16 @@ import java.util.UUID;
 public interface NsxRepository extends JpaRepository<Nsx, UUID> {
     @Override
     List<Nsx> findAll();
+
+    @Override
+    <S extends Nsx> S saveAndFlush(S entity);
+
+    @Override
+    Nsx getOne(UUID uuid);
+
+    @Override
+    <S extends Nsx> S save(S entity);
+
+    @Override
+    void deleteById(UUID uuid);
 }

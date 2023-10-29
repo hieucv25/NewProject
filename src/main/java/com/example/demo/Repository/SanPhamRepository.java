@@ -10,4 +10,19 @@ import java.util.UUID;
 public interface SanPhamRepository extends JpaRepository<SanPham, UUID> {
     @Override
     List<SanPham> findAll();
+
+    @Override
+    <S extends SanPham> S save(S entity);
+
+    @Override
+    <S extends SanPham> S saveAndFlush(S entity);
+
+    @Override
+    SanPham getOne(UUID uuid);
+
+    @Override
+    void deleteById(UUID uuid);
+
+    @Override
+    void delete(SanPham entity);
 }
